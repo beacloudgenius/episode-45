@@ -11,7 +11,7 @@
     apt: name=ntp state=installed update_cache=yes
 
   - name: write our ntp.conf
-    template: src=/home/vagrant/files/ntp.conf.j2 dest=/etc/ntp.conf mode=644 owner=root group=root
+    template: src=/root/files/ntp.conf.j2 dest=/etc/ntp.conf mode=644 owner=root group=root
     notify: restart ntp
 
   - name: start ntp
